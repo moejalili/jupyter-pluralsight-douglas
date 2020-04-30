@@ -1,0 +1,16 @@
+   7: random_password(16)
+   8:
+%%writefile utils.py
+import random
+import string
+
+def random_password(l):
+    return ''.join(random.choices(string.ascii_letters, k = l))
+   9: random_password(16)
+  10: ls
+  11: !cat utils.py
+  12: %%writefile?
+  13: %history?
+  14: %history -n
+  15: %history -no
+  16: %history -n -l 10
